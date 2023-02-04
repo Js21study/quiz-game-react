@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Abril Fatface', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper{
+  background: #DCDCDC;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  padding: 15% 20%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  background: radial-gradient(#778899, #2F4F4F);
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+
+.card__link {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 24px;
+}
+
+.card__link::after {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.arrow{
+  position: relative;
+  top: 5px;
+}
+
+progress{
+  background-color: #A9A9A9;
+  width: 490px;
+  border-radius: 5px;
+}
+
+/* ::-moz-progress-bar {
+  background-color: #778899;
+} */
+
+
+progress::-webkit-progress-bar,
+progress::-moz-progress-bar {
+  background-color: #778899;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  border: 1px solid #696969;
+  border-radius: 5px;
+  margin: 5px auto;
+  padding: 10px;
+  background: rgba(0, 0, 0, .2);
+  cursor: pointer;
+
+}
+
+li:hover{
+  background: rgba(0, 0, 0, .4);
+  transition: all 0.6s ease;
+
 }
